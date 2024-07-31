@@ -1,0 +1,54 @@
+import pandas as pd
+from Connector_class import Connector
+
+
+
+
+class Inventory:
+    def __init__(self):
+        self.connection = Connector()
+        self.products = self.connection.load_file()
+
+
+    def show_All_Products(self):
+        for product in self.products:
+            print(product)
+
+    def show_Product_Types(self):
+        products_type = self.products['Type'].unique()
+        for idx, prod in enumerate(products_type):
+            print(f'{idx + 1}: {prod}')
+        return products_type
+    
+
+    def add_new_product(self, product):
+        if product.product_name not in self.products:
+            product.cod = len(self.products) + 1
+            self.products = pd.concat([self.products, product.to_Data_Frame()])
+            self.connection.save_file(self.products)
+            print(f'{product.quantity} pieces of the product {product.product_name} has been successfully added to the inventory')
+
+    def remove_product(self, cod):
+        if cod not in self.products['Cod']:
+            print('Please insert a valid code')
+        else:
+            self.products = self.products.loc[self.products['Cod'] != cod]
+            self.connection.save_file(self.products)
+
+    def add_inventory_of_product(self,cod,quantity):
+        quantity = self.products[self.products['Cod'] == cod]['Quantity'] + quantity
+        self.products.loc[quantity.index, 'Quantity'] = quantity.values
+        self.connection.save_file(self.products)
+        print(f'{quantity} pieces have been added to the inventary of the product with code {cod}.')
+
+
+    def remove_inventory_of_product(self,cod,quantity):
+        current_qty = self.products[self.products['Cod']==cod][['Quantity']]
+        if quantity > current_qty.values:
+            print(f'Please insert a quantity less than the current inventory {current_qty.values}')
+
+        else:
+            quantity = self.products[self.products['Cod'] == cod]['Quantity'] - quantity
+            self.products.loc[quantity.index, 'Quantity'] = quantity.values
+            self.connection.save_file(self.products)
+            print(f'{quantity} pieces have been removed from the inventary of the product with code {cod}.')
