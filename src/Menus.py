@@ -13,5 +13,8 @@ class Menu:
         print('4: Add inventory of product')
         print('5: Remove inventory of product')
 
+    def show_reports_menu(self):
+        print()
+
    
 

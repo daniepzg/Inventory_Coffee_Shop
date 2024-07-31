@@ -2,6 +2,7 @@ from Orders import Order
 from Menus import Menu
 from Inventory import Inventory
 from Product_class import Product
+from Reports import Reports
 
 
 def logo():
@@ -54,6 +55,10 @@ def main():
                 inv = False
 
     if option == "2":
+        inventory = Inventory()
+        report= Reports(inventory.products)
+        report.report_actual()
+        report.report_products_to_expire()
         print("2")
 
 

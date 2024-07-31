@@ -1,13 +1,13 @@
 import pandas as pd
 from Connector_class import Connector
-
-
+from Logger import LoggerFactory
 
 
 class Inventory:
     def __init__(self):
-        self.connection = Connector()
-        self.products = self.connection.load_file()
+        self._connection = Connector()
+        self.products = self._connection.load_file()
+        self.logger = LoggerFactory.create_logger('file')
 
 
     def show_All_Products(self):
@@ -44,7 +44,9 @@ class Inventory:
     def remove_inventory_of_product(self,cod,quantity):
         current_qty = self.products[self.products['Cod']==cod][['Quantity']]
         if quantity > current_qty.values:
-            print(f'Please insert a quantity less than the current inventory {current_qty.values}')
+            msg ='Please insert a quantity less than the current inventory {current_qty.values}'
+            self.logger.warning(msg)
+
 
         else:
             quantity = self.products[self.products['Cod'] == cod]['Quantity'] - quantity
