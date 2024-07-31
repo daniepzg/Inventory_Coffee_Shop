@@ -11,8 +11,7 @@ class Inventory:
 
 
     def show_All_Products(self):
-        for product in self.products:
-            print(product)
+        print(self.products.to_string())
 
     def show_Product_Types(self):
         products_type = self.products['Type'].unique()
