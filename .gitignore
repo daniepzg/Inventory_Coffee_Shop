@@ -13,5 +13,4 @@ dist/
 *.ipr
 *.iws
 *.xml
-*.txt
 *.log

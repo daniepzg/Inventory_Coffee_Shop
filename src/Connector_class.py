@@ -11,11 +11,11 @@ class Singleton:
 
 class Connector(Singleton):
 
-    def __init__(self, path='C:/Users/User/OneDrive/Documents/Source/Periodo 3/Dessign patterns/Project/Inventory_Coffee_Shop-master/Products_inventory/Products_list.csv'):
+    def __init__(self, path='../Products_inventory/Products_list.pkl'):
         self.path = path
 
     def load_file(self):
-        return pd.read_csv(self.path)
+        return pd.read_pickle(self.path)
 
     def save_file(self, products):
-        products.to_csv(self.path, index=False)
+        products.to_pickle(self.path, index=False)
