@@ -14,7 +14,10 @@ class Menu:
         print('5: Remove inventory of product')
 
     def show_reports_menu(self):
-        print()
+        print('\n1: Export the current report')
+        print('2: Export the report with products to expire')
+        print('3: Export the assets balance report')
+
 
    
 

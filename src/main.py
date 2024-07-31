@@ -1,4 +1,3 @@
-from Orders import Order
 from Menus import Menu
 from Inventory import Inventory
 from Product_class import Product
@@ -50,19 +49,27 @@ def main():
                 code= int(input("Please insert the code of the product:"))  
                 qty= int(input("Please insert the quantity to remove from the inventory:")) 
                 inventory.remove_inventory_of_product(code,qty)
-            menu_option = input('Would you like to continue in this menu?(Y), or go back to the previous menu (P)?')
-            if menu_option.upper() == 'N':
+            menu_option = input('Would you like to continue in this menu?(Y), or exit (E)?')
+            if menu_option.upper() == 'E':
                 inv = False
 
     if option == "2":
         inventory = Inventory()
         report= Reports(inventory.products)
-        report.report_actual()
-        report.report_products_to_expire()
-        print("2")
+        inv = True
+        while(inv):
+            menu.show_reports_menu()
+            action = input("\nPlease, choose an option:")
+            if action =="1":
+                report.current_report()
 
-
-
+            elif action =="2":
+                report.products_to_expire_report()
+            elif action =="3":
+                report.assets_balance_report()
+            menu_option = input('Would you like to continue in this menu?(Y), or go back to the previous menu (E)?')
+            if menu_option.upper() == 'E':
+                inv = False
 
 
 if __name__ == "__main__":

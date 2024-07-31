@@ -5,6 +5,7 @@ from Logger import LoggerFactory
 
 class Inventory:
     def __init__(self):
+        self.connection = None
         self._connection = Connector()
         self.products = self._connection.load_file()
         self.logger = LoggerFactory.create_logger('file')
@@ -12,6 +13,8 @@ class Inventory:
 
     def show_All_Products(self):
         print(self.products.to_string())
+        msg ='All products have been shown'
+        self.logger.info(msg)
 
     def show_Product_Types(self):
         products_type = self.products['Type'].unique()
@@ -25,31 +28,35 @@ class Inventory:
             product.cod = len(self.products) + 1
             self.products = pd.concat([self.products, product.to_Data_Frame()])
             self.connection.save_file(self.products)
-            print(f'{product.quantity} pieces of the product {product.product_name} has been successfully added to the inventory')
+            msg ='A new product has been successfully added to the inventory'
+            self.logger.info(msg)
 
     def remove_product(self, cod):
         if cod not in self.products['Cod']:
-            print('Please insert a valid code')
+            msg ='Please insert a valid code'
+            self.logger.error(msg)
         else:
             self.products = self.products.loc[self.products['Cod'] != cod]
             self.connection.save_file(self.products)
+            msg ='Product has been removed from the inventory'
+            self.logger.warning(msg)
 
     def add_inventory_of_product(self,cod,quantity):
         quantity = self.products[self.products['Cod'] == cod]['Quantity'] + quantity
         self.products.loc[quantity.index, 'Quantity'] = quantity.values
         self.connection.save_file(self.products)
-        print(f'{quantity} pieces have been added to the inventary of the product with code {cod}.')
+        msg='Product has been successfully added to the inventory'
+        self.logger.warning(msg)
 
 
     def remove_inventory_of_product(self,cod,quantity):
         current_qty = self.products[self.products['Cod']==cod][['Quantity']]
         if quantity > current_qty.values:
-            msg ='Please insert a quantity less than the current inventory {current_qty.values}'
-            self.logger.warning(msg)
-
-
+            msg ='Please insert a quantity smaller than the current inventory'
+            self.logger.error(msg)
         else:
             quantity = self.products[self.products['Cod'] == cod]['Quantity'] - quantity
             self.products.loc[quantity.index, 'Quantity'] = quantity.values
             self.connection.save_file(self.products)
-            print(f'{quantity} pieces have been removed from the inventary of the product with code {cod}.')
+            msg='Product has been removed from the inventory'
+            self.logger.warning(msg)
