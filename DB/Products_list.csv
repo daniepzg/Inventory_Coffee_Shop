@@ -1,0 +1,26 @@
+Cod,Type,Product Name,Price,Description,Quantity
+1,Coffee,Espresso,3.0,"A strong, concentrated coffee served in a small amount.",34
+2,Coffee,Latte,4.5,Espresso mixed with steamed milk and a light layer of foam.,22
+3,Coffee,Cappuccino,4.5,"Equal parts espresso, steamed milk, and foam.",44
+4,Coffee,Americano,3.5,Espresso diluted with hot water.,32
+5,Coffee,Mocha,5.0,"Espresso with chocolate syrup, steamed milk, and whipped cream.",31
+6,Coffee,Flat White,4.5,Espresso with steamed milk and a thin layer of microfoam.,37
+7,Coffee,Macchiato,3.75,Espresso with a small amount of foamed milk on top.,44
+8,Coffee,Iced Coffee,4.0,Cold brewed coffee served over ice.,36
+9,Coffee,Cold Brew,4.5,"Smooth, cold brewed coffee served over ice.",50
+10,Coffee,Nitro Cold Brew,5.5,Cold brew coffee infused with nitrogen for a creamy texture.,32
+11,Tea,Chai Latte,4.5,Spiced black tea with steamed milk and a hint of sweetness.,31
+12,Tea,Matcha Latte,5.0,Finely ground green tea leaves mixed with steamed milk.,32
+13,Tea,Green Tea,3.0,Light and refreshing green tea.,39
+14,Tea,Black Tea,3.0,Bold and robust black tea.,47
+15,Tea,Herbal Tea,3.5,"Caffeine-free blend of herbs, spices, and flowers.",43
+16,Other Drinks,Hot Chocolate,4.0,Rich and creamy hot chocolate topped with whipped cream.,25
+17,Other Drinks,Iced Tea,3.5,Chilled tea served over ice with a hint of lemon.,35
+18,Other Drinks,Smoothie,6.0,"A blend of fruits, yogurt, and juice.",26
+19,Pastry,Croissant,2.5,"A flaky, buttery pastry.",20
+20,Pastry,Muffin,2.75,"A soft, baked good with various flavors (e.g., blueberry, chocolate).",37
+21,Pastry,Bagel with Cream Cheese,3.5,A toasted bagel with a spread of cream cheese.,31
+22,Pastry,Chocolate Chip Cookie,2.0,A classic cookie with chocolate chips.,23
+23,Pastry,Scone,3.0,"A slightly sweet, dense baked good, often with fruit.",47
+24,Food,Sandwich,7.0,A variety of sandwiches with different fillings.,33
+25,Food,Salad,8.0,Fresh salads with assorted ingredients.,92

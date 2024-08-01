@@ -18,6 +18,11 @@ class Menu:
         print('2: Export the report with products to expire')
         print('3: Export the assets balance report')
 
+    def show_coffee_menu(self):
+        print('\n1: Derulo Coffee')
+        print('2: Comma Coffee')
+        print('3: French Coffee')
+
 
    
 

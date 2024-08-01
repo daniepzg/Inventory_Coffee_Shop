@@ -2,6 +2,7 @@ from Menus import Menu
 from Inventory import Inventory
 from Product_class import Product
 from Reports import Reports
+from Data_adapters import PickleAdapter, CsvAdapter, JsonAdapter
 
 
 def logo():
@@ -12,13 +13,32 @@ def logo():
     print("#    " + nombre + "    #")
     print("#" * longitud)
 
+def choose_coffe_shop(coffeshop):
+    if coffeshop == 1:
+        adapter = PickleAdapter()
+        path ='../DB/Products_list.pkl'
+    elif coffeshop == 2:
+        adapter = CsvAdapter()
+        path ='../DB/Products_list.csv'
+    else:
+        adapter = JsonAdapter()
+        path ='../DB/Products_list.json'
+    return adapter, path
 
 def main():
+
     menu = Menu()
+    menu.show_coffee_menu()
+    coffeshop= int(input("\n Welcome to Coffee Inventory Manager,"
+                         " please select The Coffee to work on:"))
+    adapter, path = choose_coffe_shop(coffeshop)
+
+
     menu.show_main_menu()
+
     option = input("\nPlease, choose an option:")
     if option == "1":
-        inventory = Inventory()
+        inventory = Inventory(adapter, path)
         inv = True
         while(inv):
             menu.show_inventory_menu()
@@ -54,7 +74,7 @@ def main():
                 inv = False
 
     if option == "2":
-        inventory = Inventory()
+        inventory = Inventory(adapter, path)
         report= Reports(inventory.products)
         inv = True
         while(inv):

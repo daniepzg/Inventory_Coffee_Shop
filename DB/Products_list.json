@@ -1,0 +1,202 @@
+[
+  {
+    "Cod": 1,
+    "Type": "Coffee",
+    "Product Name": "Espresso",
+    "Price": 3,
+    "Description": "A strong, concentrated coffee served in a small amount.",
+    "Quantity": 34
+  },
+  {
+    "Cod": 2,
+    "Type": "Coffee",
+    "Product Name": "Latte",
+    "Price": 4.5,
+    "Description": "Espresso mixed with steamed milk and a light layer of foam.",
+    "Quantity": 22
+  },
+  {
+    "Cod": 3,
+    "Type": "Coffee",
+    "Product Name": "Cappuccino",
+    "Price": 4.5,
+    "Description": "Equal parts espresso, steamed milk, and foam.",
+    "Quantity": 44
+  },
+  {
+    "Cod": 4,
+    "Type": "Coffee",
+    "Product Name": "Americano",
+    "Price": 3.5,
+    "Description": "Espresso diluted with hot water.",
+    "Quantity": 32
+  },
+  {
+    "Cod": 5,
+    "Type": "Coffee",
+    "Product Name": "Mocha",
+    "Price": 5,
+    "Description": "Espresso with chocolate syrup, steamed milk, and whipped cream.",
+    "Quantity": 31
+  },
+  {
+    "Cod": 6,
+    "Type": "Coffee",
+    "Product Name": "Flat White",
+    "Price": 4.5,
+    "Description": "Espresso with steamed milk and a thin layer of microfoam.",
+    "Quantity": 37
+  },
+  {
+    "Cod": 7,
+    "Type": "Coffee",
+    "Product Name": "Macchiato",
+    "Price": 3.75,
+    "Description": "Espresso with a small amount of foamed milk on top.",
+    "Quantity": 44
+  },
+  {
+    "Cod": 8,
+    "Type": "Coffee",
+    "Product Name": "Iced Coffee",
+    "Price": 4,
+    "Description": "Cold brewed coffee served over ice.",
+    "Quantity": 36
+  },
+  {
+    "Cod": 9,
+    "Type": "Coffee",
+    "Product Name": "Cold Brew",
+    "Price": 4.5,
+    "Description": "Smooth, cold brewed coffee served over ice.",
+    "Quantity": 50
+  },
+  {
+    "Cod": 10,
+    "Type": "Coffee",
+    "Product Name": "Nitro Cold Brew",
+    "Price": 5.5,
+    "Description": "Cold brew coffee infused with nitrogen for a creamy texture.",
+    "Quantity": 32
+  },
+  {
+    "Cod": 11,
+    "Type": "Tea",
+    "Product Name": "Chai Latte",
+    "Price": 4.5,
+    "Description": "Spiced black tea with steamed milk and a hint of sweetness.",
+    "Quantity": 31
+  },
+  {
+    "Cod": 12,
+    "Type": "Tea",
+    "Product Name": "Matcha Latte",
+    "Price": 5,
+    "Description": "Finely ground green tea leaves mixed with steamed milk.",
+    "Quantity": 32
+  },
+  {
+    "Cod": 13,
+    "Type": "Tea",
+    "Product Name": "Green Tea",
+    "Price": 3,
+    "Description": "Light and refreshing green tea.",
+    "Quantity": 39
+  },
+  {
+    "Cod": 14,
+    "Type": "Tea",
+    "Product Name": "Black Tea",
+    "Price": 3,
+    "Description": "Bold and robust black tea.",
+    "Quantity": 47
+  },
+  {
+    "Cod": 15,
+    "Type": "Tea",
+    "Product Name": "Herbal Tea",
+    "Price": 3.5,
+    "Description": "Caffeine-free blend of herbs, spices, and flowers.",
+    "Quantity": 43
+  },
+  {
+    "Cod": 16,
+    "Type": "Other Drinks",
+    "Product Name": "Hot Chocolate",
+    "Price": 4,
+    "Description": "Rich and creamy hot chocolate topped with whipped cream.",
+    "Quantity": 25
+  },
+  {
+    "Cod": 17,
+    "Type": "Other Drinks",
+    "Product Name": "Iced Tea",
+    "Price": 3.5,
+    "Description": "Chilled tea served over ice with a hint of lemon.",
+    "Quantity": 35
+  },
+  {
+    "Cod": 18,
+    "Type": "Other Drinks",
+    "Product Name": "Smoothie",
+    "Price": 6,
+    "Description": "A blend of fruits, yogurt, and juice.",
+    "Quantity": 26
+  },
+  {
+    "Cod": 19,
+    "Type": "Pastry",
+    "Product Name": "Croissant",
+    "Price": 2.5,
+    "Description": "A flaky, buttery pastry.",
+    "Quantity": 20
+  },
+  {
+    "Cod": 20,
+    "Type": "Pastry",
+    "Product Name": "Muffin",
+    "Price": 2.75,
+    "Description": "A soft, baked good with various flavors (e.g., blueberry, chocolate).",
+    "Quantity": 37
+  },
+  {
+    "Cod": 21,
+    "Type": "Pastry",
+    "Product Name": "Bagel with Cream Cheese",
+    "Price": 3.5,
+    "Description": "A toasted bagel with a spread of cream cheese.",
+    "Quantity": 31
+  },
+  {
+    "Cod": 22,
+    "Type": "Pastry",
+    "Product Name": "Chocolate Chip Cookie",
+    "Price": 2,
+    "Description": "A classic cookie with chocolate chips.",
+    "Quantity": 23
+  },
+  {
+    "Cod": 23,
+    "Type": "Pastry",
+    "Product Name": "Scone",
+    "Price": 3,
+    "Description": "A slightly sweet, dense baked good, often with fruit.",
+    "Quantity": 47
+  },
+  {
+    "Cod": 24,
+    "Type": "Food",
+    "Product Name": "Sandwich",
+    "Price": 7,
+    "Description": "A variety of sandwiches with different fillings.",
+    "Quantity": 33
+  },
+  {
+    "Cod": 25,
+    "Type": "Food",
+    "Product Name": "Salad",
+    "Price": 8,
+    "Description": "Fresh salads with assorted ingredients.",
+    "Quantity": 92
+  }
+]

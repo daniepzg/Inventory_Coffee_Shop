@@ -1,12 +1,12 @@
 import pandas as pd
-from Connector_class import Connector
+from Adapter_Mgr import Connector
 from Logger import LoggerFactory
 
 
 class Inventory:
-    def __init__(self):
+    def __init__(self,adapter, path):
         self.connection = None
-        self._connection = Connector()
+        self._connection = Connector(adapter,path)
         self.products = self._connection.load_file()
         self.logger = LoggerFactory.create_logger('file')
 

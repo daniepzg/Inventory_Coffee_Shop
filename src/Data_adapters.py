@@ -1,5 +1,7 @@
 import csv
-import pickle
+import json
+
+import pandas as pd
 from abc import ABC, abstractmethod
 
 
@@ -12,23 +14,26 @@ class DataAdapter(ABC):
 class CsvAdapter(DataAdapter):
 
     def read_data(self, file_path: str) -> dict:
-        data = {}
-        with open(file_path, mode='r') as file:
-            csv_reader = csv.DictReader(file)
-            for row in csv_reader:
-                data[row['Cod']] = {
-                    'Cod': row['Cod'],
-                    'Type': row['Type'],
-                    'Product Name': row['Product Name'],
-                    'Price': row['Price'],
-                    'Description': row['Description'],
-                    'Quantity': row['Quantity']
-                }
+        data = pd.read_csv(file_path)
+        columns = ['Cod','Type','Product Name','Price','Description','Quantity']
+        data = data[columns]
         return data
 
 
 class PickleAdapter(DataAdapter):
 
+
     def read_data(self, file_path: str) -> dict:
-        with open(file_path, 'rb') as file:
-            data = pickle.load(file)
+        data = pd.read_pickle(file_path)
+        columns = ['Cod','Type','Product Name','Price','Description','Quantity']
+        data = data[columns]
+        return data
+
+
+class JsonAdapter(DataAdapter):
+
+    def read_data(self, file_path: str) -> dict:
+        columns = ['Cod','Type','Product Name','Price','Description','Quantity']
+        df = pd.read_json(file_path)
+        df= df[columns]
+        return df
