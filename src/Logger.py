@@ -1,5 +1,17 @@
-class FileLogger:
-    def __init__(self, log_files="basic_log.log"):
+from abc import ABC, abstractmethod
+
+class Observer(ABC):
+    @abstractmethod
+    def info(self,  msg):
+        pass
+    def warning(self,  msg):
+        pass
+    def error(self,  msg):
+        pass
+
+
+class FileLogger(Observer):
+    def __init__(self, log_files="../Log/basic_log.log"):
         self.log_file = log_files
         self._setup_log_file()
 
@@ -20,7 +32,9 @@ class FileLogger:
     def error(self, message: str):
         self.log("ERROR", message)
 
-class ConsoleLogger:
+
+
+class ConsoleLogger(Observer):
     def log(self, level, message):
         print(f"{level}: {message}")
 
@@ -33,6 +47,7 @@ class ConsoleLogger:
     def error(self, message: str):
         self.log("ERROR", message)
 
+
 class LoggerFactory:
     @staticmethod
     def create_logger(logger_type):
@@ -42,4 +57,12 @@ class LoggerFactory:
             return ConsoleLogger()
         else:
             raise ValueError(f"Unknown logger type: {logger_type}")
+
+
+
+
+
+
+
+
 

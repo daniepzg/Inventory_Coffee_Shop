@@ -23,5 +23,5 @@ class Connector(Singleton):
             return products
 
     def save_file(self, products):
-        products.to_pickle(self.path, index=False)
+        self.adapter.save_data(self.path,products)
 
