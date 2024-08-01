@@ -27,7 +27,6 @@ class Connector(Singleton):
     def connect_db(self,path="../DB"):
         pass
 
-
 class Connect_pickle(Adapted_db):
 
 class Connect_csv(Adapted_db):
