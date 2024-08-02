@@ -35,9 +35,9 @@ class PickleAdapter(DataAdapter):
         data = data[columns]
         return data
 
-    def save_file(self,file_path: str,  products):
-        products.to_pickle(file_path, index=False)
-
+    def save_data(self,file_path: str,  products):
+        products.to_pickle(file_path)
+        print(f'The product with has been removed from the inventory')
 
 class JsonAdapter(DataAdapter):
 

@@ -48,7 +48,7 @@ class Inventory:
             self.notifier.notify_listeners('info',msg)
 
     def remove_product(self, cod):
-        if cod not in self.products['Cod']:
+        if cod not in self.products['Cod'].values:
             msg ='Please insert a valid code'
             self.logger.error(msg)
         else:

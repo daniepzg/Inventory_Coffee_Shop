@@ -57,13 +57,11 @@ def main():
                 inventory.show_All_Products()
                 code= int(input("Please insert the code of the product:"))   
                 inventory.remove_product(code)
-                print(f'The product with the code {code} has been removed from the inventory')
             if action=="4":
                 inventory.show_All_Products()
                 code= int(input("Please insert the code of the product:"))  
                 qty= int(input("Please insert the quantity to add to the inventory:"))  
                 inventory.add_inventory_of_product(code,qty)
-               
             if action=="5":
                 inventory.show_All_Products()
                 code= int(input("Please insert the code of the product:"))  
