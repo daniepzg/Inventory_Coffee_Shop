@@ -4,7 +4,7 @@ from src.Logger import FileLogger
 
 class TestFileLogger(unittest.TestCase):
     def setUp(self):
-        self.log_file = "test_log.log"
+        self.log_file = "../Log/test_log.log"
         self.logger = FileLogger(self.log_file)
 
     def test_info_logging(self):

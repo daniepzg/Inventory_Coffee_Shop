@@ -14,7 +14,6 @@ class Singleton:
 class Connector(Singleton):
 
     def __init__(self, adapter: DataAdapter, path):
-        self.adapter = None
         self.path = path
         self.adapter = adapter
 

@@ -3,9 +3,8 @@ from Logger import LoggerFactory
 
 class Reports:
     def __init__(self,df):
-        self.logger = None
         self.df=df
-        self.logger = LoggerFactory.create_logger('file')
+        self.logger = LoggerFactory.create_logger('console')
 
     def current_report(self):
         self.df.to_csv('../Reports/Active_report.csv')

@@ -25,8 +25,6 @@ class Inventory:
         self.notifier = Notifier()
         self.notifier.register_listener(self.logger)
 
-
-
     def show_All_Products(self):
         print(self.products.to_string())
         msg ='All products have been shown'

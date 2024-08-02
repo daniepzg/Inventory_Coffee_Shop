@@ -19,9 +19,9 @@ class Menu:
         print('3: Export the assets balance report')
 
     def show_coffee_menu(self):
-        print('\n1: Derulo Coffee')
+        print('\n1: French Coffee')
         print('2: Comma Coffee')
-        print('3: French Coffee')
+        print('3: Derulo Coffee')
 
 
    
