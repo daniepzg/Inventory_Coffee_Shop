@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Coffee Shop Inventory Manager! This project is a simple inventory management system designed for a coffee shop. It allows users to manage product inventory, generate reports, and handle various data formats (CSV, Pickle, JSON).
+Welcome to the Coffee Shop Inventory Manager! This project is a simple inventory management system designed for coffee shops. It allows users to manage product inventory, generate reports, and handle various data formats (CSV, Pickle, JSON).
 
 ## Features
 
